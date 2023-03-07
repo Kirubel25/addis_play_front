@@ -8,7 +8,7 @@ function* deleteFormSaga(action) {
   const id  = action.payload;
   console.log(id,'ggd')
   try {
-    yield call(axios.delete, `http://localhost:8000/api/songs/${id}`);
+    yield call(axios.delete, `https://addis-pay-back-app.onrender.com//api/songs/${id}`);
 
     // yield fetch(`http://localhost:8000/api/songs/${id}`, {
     //     method: 'DELETE',

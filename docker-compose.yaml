@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  fronend:
+    build: ../ADDIS_PLAY
+    container_name: addisplay_c
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true

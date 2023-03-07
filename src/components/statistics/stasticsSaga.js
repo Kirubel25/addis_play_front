@@ -3,7 +3,7 @@ import { fetchStasticsStart, fetchStasticsSuccess, fetchStasticsFailure } from '
 
 function* fetchStasticsHandler() {
   try {
-    const response = yield call( () => fetch("http://localhost:8000/api/songs/stasitics"));
+    const response = yield call( () => fetch("https://addis-pay-back-app.onrender.com//api/songs/stasitics"));
     const data = yield response.json()
     yield put(fetchStasticsSuccess(data));
 

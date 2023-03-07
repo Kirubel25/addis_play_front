@@ -4,7 +4,7 @@ import { fetchSongsStart, fetchSongsSuccess, fetchSongsFailure } from './songSli
 
 function* fetchSongsHandler() {
   try {
-    const response = yield call( () => fetch("http://localhost:8000/api/songs"));
+    const response = yield call( () => fetch("https://addis-pay-back-app.onrender.com/:8000/api/songs"));
     const data = yield response.json()
     yield put(fetchSongsSuccess(data));
     

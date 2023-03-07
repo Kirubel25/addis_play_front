@@ -77,7 +77,6 @@ const Button = styled.button`
 `;
 
 const EditModal = ({ music }) => {
-    console.log(music,"rrrrrrrr");
   const [show, setShow] = useState(false);
   const [title, setTitle] = useState(music.title);
   const [album, setAlbum] = useState(music.album);

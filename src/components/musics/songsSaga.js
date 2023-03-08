@@ -1,11 +1,12 @@
 import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
 import { fetchSongsStart, fetchSongsSuccess, fetchSongsFailure } from './songSlice';
-// import { fetchSongs } from './songsAPI';
+import { API_BASE } from '../../config';
 
 function* fetchSongsHandler() {
   try {
-    const response = yield call( () => fetch("https://addis-pay-back-app.onrender.com/api/songs"));
+    const response = yield call( () => fetch(API_BASE));
     const data = yield response.json()
+
     yield put(fetchSongsSuccess(data));
     
   } catch (error) {

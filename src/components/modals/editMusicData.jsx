@@ -6,6 +6,7 @@ import {
 import { MdOutlineEdit, MdOutlineDeleteOutline } from "react-icons/md";
 import { useDispatch } from 'react-redux';
 import { openModal,closeModal, editForm,submitFormSuccess, submitFormFailure } from '../musics/editMusicSlice';
+import { primaryColor, secondaryColor } from "../nav/navbar.style";
 
 const Modal = styled.div`
   position: fixed;
@@ -24,6 +25,8 @@ const ModalContent = styled.div`
   padding: 2rem;
   border-radius: 0.25rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  width: 350px;
+  max-width: 90%;
 `;
 
 // const CloseButton = styled.button`
@@ -57,22 +60,29 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  padding: 0.5rem;
-  border: none;
-  border-radius: 0.25rem;
-  margin-bottom: 1rem;
+width: 100%;
+margin-bottom: 16px;
+padding: 8px;
+border-radius: 4px;
+border: 1px solid #ccc;
+border-color: ${primaryColor};
+
 `;
 
 const Button = styled.button`
-  padding: 0.5rem;
-  background-color: #0077ff;
-  color: #fff;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
   border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: ${primaryColor};
   &:hover {
-    background-color: #005ae6;
+    color: ${secondaryColor};
   }
 `;
 
